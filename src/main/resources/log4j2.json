@@ -1,0 +1,57 @@
+{
+	"configuration": {
+		"name": "Default",
+		"appenders": {
+			"RollingFile": [
+				{
+					"name": "File",
+					"fileName": "${catalina.base}/logs/console.log",
+					"filePattern": "${catalina.base}/logs/assignment-backup-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+					"PatternLayout": {
+						"pattern": "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
+					},
+					"Policies": {
+						"SizeBasedTriggeringPolicy": {
+							"size": "10 MB"
+						}
+					},
+					"DefaultRolloverStrategy": {
+						"max": "10"
+					}
+				},
+				{
+					"name": "analytics",
+					"fileName": "${catalina.base}/logs/payload.log",
+					"filePattern": "${catalina.base}/logs/assignment-backup-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+					"PatternLayout": {
+						"pattern": "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
+					},
+					"Policies": {
+						"SizeBasedTriggeringPolicy": {
+							"size": "10 MB"
+						}
+					},
+					"DefaultRolloverStrategy": {
+						"max": "10"
+					}
+				}
+			]
+		},
+		"loggers": {
+			"logger": {
+				"name": "com.xerovit.io.assignment.interceptor",
+				"level": "info",
+				"additivity": "false",
+				"appender-ref": {
+					"ref": "analytics"
+				}
+			},
+			"root": {
+				"level": "debug",
+				"appender-ref": {
+					"ref": "File"
+				}
+			}
+		}
+	}
+}
