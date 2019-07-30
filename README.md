@@ -13,7 +13,7 @@ Technical Description:
   - Spring Boot 1.5 or higher.
   - MongoDB.
   - Documentation. (can be a simple Readme or any other choice of yours. We expect to find which tech/frameworks/libraries you decided to use + how to use/call it (ideally add postman (or similar) collections (json) with sample REST calls). 
-  	** assignment > postman_api > API_DOC.postman_collection.json
+  	You can find under location =>  assignment > postman_api > API_DOC.postman_collection.json
 	
   
 
