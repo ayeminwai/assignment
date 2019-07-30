@@ -6,7 +6,8 @@ Technical Description:
   - Spring framework.
   - Persistent database.
 	- Juint Testing.
-	- spring security / authentication.
+	- spring security
+	- Oauth2 for authentication.
 	- JWT for auth.
   - source-code platform (Github).
   - Spring Boot 1.5 or higher.
